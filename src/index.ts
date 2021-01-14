@@ -12,9 +12,11 @@ const __classCheck = (instance: any, constructor: any) => instance instanceof co
 class TOC {
   private el?: HTMLElement;
   private container?: HTMLElement;
+  public options?: TOCOptions;
 
-  constructor(public options: TOCOptions) {
+  constructor(options: TOCOptions = { el: '' }) {
     if (!__classCheck(this, TOC)) return new TOC(options);
+    this.options = options;
     this.elementCheck();
     const { beforeMount, onMounted } = this.options;
     beforeMount && beforeMount();
@@ -23,7 +25,7 @@ class TOC {
   }
 
   elementCheck() {
-    const { container, el } = this.options;
+    const { container, el } = this.options!;
     const containerEl = container ? (typeof container === 'string' ? document.querySelector(container) : container) : document.body;
     const mountEl = typeof el === 'string' ? document.querySelector(el) : el;
     if (!containerEl) throw new Error('Can not find container element: ' + container);
