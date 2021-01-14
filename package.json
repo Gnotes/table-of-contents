@@ -1,5 +1,5 @@
 {
-  "name": "table-of-contents",
+  "name": "@xinghe/toc",
   "version": "1.0.0",
   "description": "A pure javascript lib to generate table of contents (TOC) after page loaded.",
   "main": "lib/index.js",
