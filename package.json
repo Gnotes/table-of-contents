@@ -1,0 +1,24 @@
+{
+  "name": "table-of-contents",
+  "version": "1.0.0",
+  "description": "A pure javascript lib to generate table of contents (TOC) after page loaded.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
+  },
+  "keywords": [
+    "toc",
+    "table-of-contents"
+  ],
+  "author": "xing.he",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.1.0",
+    "rollup": "^2.36.1",
+    "rollup-plugin-dts": "^2.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.3"
+  }
+}
