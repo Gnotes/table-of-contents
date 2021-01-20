@@ -28,9 +28,10 @@ new TOC({ el: '#toc' });
 
 ### Configuration
 
-| Field       | Type                | Comment                                                                                |
-| ----------- | ------------------- | -------------------------------------------------------------------------------------- |
-| el          | HTMLElement、String | **Required**, the root element which toc needs to be mounted                           |
-| container   | HTMLElement、String | **Optional**, the rool element which contains headings, the default is `document.body` |
-| beforeMount | Function            | **Optional**, life-cycle hook called _before_ toc mount                                |
-| onMounted   | Function            | **Optional**, life-cycle hook called _after_ toc mounted                               |
+| Field       | Type                | Required | Comment                                                                  |
+| ----------- | ------------------- | -------- | ------------------------------------------------------------------------ |
+| el          | HTMLElement、String | **Y**    | the root element which toc needs to be mounted                           |
+| container   | HTMLElement、String | N        | the root element which contains headings, the default is `document.body` |
+| selector    | String              | N        | css selector of heading tags, default is `h1 ~ h6`                       |
+| beforeMount | Function            | N        | life-cycle hook called _before_ toc mount                                |
+| onMounted   | Function            | N        | life-cycle hook called _after_ toc mounted                               |

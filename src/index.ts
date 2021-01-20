@@ -5,6 +5,7 @@ export interface TOCOptions {
   container?: ElOrStr;
   beforeMount?: () => void;
   onMounted?: () => void;
+  selector?: string;
   [i: string]: any;
 }
 const __classCheck = (instance: any, constructor: any) => instance instanceof constructor;
@@ -35,7 +36,8 @@ class TOC {
   }
 
   mount() {
-    const headings: HTMLElement[] = [].slice.call(this.container!.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const selector = this.options!.selector || 'h1, h2, h3, h4, h5, h6';
+    const headings: HTMLElement[] = [].slice.call(this.container!.querySelectorAll(selector));
     const self = this;
     headings.forEach(function(heading, index) {
       var title = heading.textContent || `${index}`;
