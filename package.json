@@ -1,6 +1,6 @@
 {
   "name": "@xinghe/toc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A pure javascript lib to generate table of contents (TOC) after page loaded.",
   "main": "lib/index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   ],
   "author": "xing.he",
   "license": "MIT",
+  "typings": "./types/index.d.ts",
   "repository": "Gnotes/table-of-contents",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.1.0",

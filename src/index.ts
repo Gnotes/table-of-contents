@@ -1,8 +1,6 @@
-export type ElOrStr = HTMLElement | string;
-
 export interface TOCOptions {
-  el: ElOrStr;
-  container?: ElOrStr;
+  el: HTMLElement | string;
+  container?: HTMLElement | string;
   beforeMount?: () => void;
   onMounted?: () => void;
   selector?: string;
