@@ -35,3 +35,4 @@ new TOC({ el: '#toc' });
 | selector    | String              | N        | css selector of heading tags, default is `h1 ~ h6`                       |
 | beforeMount | Function            | N        | life-cycle hook called _before_ toc mount                                |
 | onMounted   | Function            | N        | life-cycle hook called _after_ toc mounted                               |
+| cleanRoot   | Boolean             | N        | clean root element before mounting doms                                  |

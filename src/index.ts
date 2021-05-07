@@ -37,6 +37,8 @@ class TOC {
     const selector = this.options!.selector || 'h1, h2, h3, h4, h5, h6';
     const headings: HTMLElement[] = [].slice.call(this.container!.querySelectorAll(selector));
     const self = this;
+    self.options!.cleanRoot && self.cleanRootElement();
+
     headings.forEach(function(heading, index) {
       var title = heading.textContent || `${index}`;
       var anchor = document.createElement('a');
@@ -50,7 +52,6 @@ class TOC {
       var div = document.createElement('div');
       div.setAttribute('class', heading.tagName.toLowerCase());
 
-      self.options!.cleanRoot && self.cleanRootElement();
       div.appendChild(link);
       self.el!.appendChild(div);
       heading.parentNode!.insertBefore(anchor, heading);
