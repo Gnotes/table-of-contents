@@ -50,10 +50,15 @@ class TOC {
       var div = document.createElement('div');
       div.setAttribute('class', heading.tagName.toLowerCase());
 
+      self.options!.cleanRoot && self.cleanRootElement();
       div.appendChild(link);
       self.el!.appendChild(div);
       heading.parentNode!.insertBefore(anchor, heading);
     });
+  }
+
+  cleanRootElement() {
+    this.el!.innerHTML = '';
   }
 }
 
