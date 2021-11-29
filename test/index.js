@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var toc = new TOC({ el: '#toc' });
+document.addEventListener('DOMContentLoaded', function () {
+  var toc = new TOC({ el: '#toc', mode: 'scroll' });
 });
