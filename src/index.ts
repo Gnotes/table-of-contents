@@ -10,6 +10,7 @@ export interface TOCOptions {
 const __classCheck = (instance: any, constructor: any) => instance instanceof constructor;
 
 const BlankReg = /\s+/g;
+const NumberReg = /^\d/g;
 
 class TOC {
   private el?: HTMLElement;
@@ -39,7 +40,10 @@ class TOC {
   }
 
   replaceBlank(str: string) {
-    return str.trim().replace(BlankReg, '-');
+    return str
+      .trim()
+      .replace(BlankReg, '-')
+      .replace(NumberReg, (m) => `_${m}`);
   }
 
   onClickHandler(e: Event) {
