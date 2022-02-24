@@ -40,17 +40,15 @@ class TOC {
   }
 
   replaceBlank(str: string) {
-    return str
-      .trim()
-      .replace(BlankReg, '-')
-      .replace(NumberReg, (m) => `_${m}`);
+    return str.trim().replace(BlankReg, '-');
+    // .replace(NumberReg, (m) => `_${m}`);
   }
 
   onClickHandler(e: Event) {
     const target = e.target as HTMLElement;
     if (target!.nodeName.toLowerCase() !== 'a') return;
     const targetId = target.dataset['targetId'];
-    const dom = document.querySelector(`#${targetId}`);
+    const dom = document.getElementById(targetId!);
     dom &&
       dom.scrollIntoView({
         behavior: 'smooth',
